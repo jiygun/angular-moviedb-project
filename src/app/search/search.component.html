@@ -1,0 +1,8 @@
+<div class="search" *ngIf="clearSearchSection">
+    <div class="search__list">
+        <a class="search__item" *ngFor="let result of searchResult" (click)="isLinkClicked()" routerLink="{{getRouterLink(result)}}">
+            <img src="{{getImagePath(result)}}" alt="">
+            <span>{{getName(result)}}</span>
+        </a>
+    </div>
+</div>

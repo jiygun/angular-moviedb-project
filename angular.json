@@ -28,7 +28,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -120,6 +121,46 @@
             "production": {
               "devServerTarget": "moviedb-project:serve:production"
             }
+          }
+        }
+      }
+    },
+    "slider-angular": {
+      "projectType": "library",
+      "root": "projects/slider-angular",
+      "sourceRoot": "projects/slider-angular/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/slider-angular/tsconfig.lib.json",
+            "project": "projects/slider-angular/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/slider-angular/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/slider-angular/src/test.ts",
+            "tsConfig": "projects/slider-angular/tsconfig.spec.json",
+            "karmaConfig": "projects/slider-angular/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/slider-angular/tsconfig.lib.json",
+              "projects/slider-angular/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

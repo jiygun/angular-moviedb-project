@@ -1,0 +1,31 @@
+<div class="popular">
+    <div class="popular__header">
+        <div class="header__head">
+            {{headerTitle}}
+        </div>
+    </div>
+    <div class="popular__main">
+        <div class="show__list">
+            <a class="show__item" *ngFor="let show of showList" routerLink="/{{routerPath}}/{{show.id}}">
+                <div class="item__header">
+                    <div class="item__name">
+                        {{show.title |summary:20 }}
+                    </div>
+                    <div class="item__avarage">
+                        {{show.voteAverage}}
+                    </div>
+                </div>
+                <div class="item__image">
+                    <img src="{{show.backdropPath!=null?mainImagePath+show.backdropPath:imageNullPath}}" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="popular__footer">
+        <!--    
+            <a class="footer__link" href="#">
+                {{footerTitle}}
+            </a>
+        -->
+    </div>
+</div>

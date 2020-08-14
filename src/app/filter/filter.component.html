@@ -1,0 +1,5 @@
+<div class="filter__drop">
+    <select [(ngModel)]="selectedFilter">
+        <option *ngFor="let filter of filterList" value="{{filter.filterQuery}}">{{filter.filterName}}</option>
+    </select>
+</div>

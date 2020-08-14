@@ -1,0 +1,17 @@
+    <div class="show" [ngStyle]="{'background-image': backgroundImage}">
+    <div class="container">
+        <div class="show__menu">
+            <app-category [categories]="genresList" (filterList)="getCategoryFilters($event)"></app-category>
+        </div>
+        <div class="show__list">
+            <div class="filter">
+                <app-filter (filterQuery)="getFilterQuery($event)" [showId]="pageSeriesId"></app-filter>
+            </div>
+            <app-list [showList]="showList" [showId]="pageSeriesId" (hoveredShow)="hoveredShow($event)"></app-list>
+            <div class="pagination">
+                <angular-paginate [totalPages]="totalPages" [maximumShowAblePage]="5"  (activePageNumber)="activePage($event)"></angular-paginate>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #alert></ng-template>

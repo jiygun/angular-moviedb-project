@@ -1,0 +1,15 @@
+<div class="home">
+    <div class="container">
+        <div class="home__slider">
+            <app-slider></app-slider>
+        </div>
+        <div class="home__popular">
+            <div class="popular__movies">
+                <app-popular [footerTitle]="" [headerTitle]="movieHeader" [showList]="movieLastList" [showId]="movieId"></app-popular>
+            </div>
+            <div class="popular_tvseries">
+                <app-popular [footerTitle]="" [headerTitle]="seriesHeader" [showList]="seriesLastList" [showId]="seriesId"></app-popular>
+            </div>
+        </div>
+    </div>
+</div>

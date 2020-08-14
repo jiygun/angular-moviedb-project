@@ -1,0 +1,19 @@
+<div class="menu__icon" (click)="openList()">
+    <fa-icon [icon]="faFilter"></fa-icon>
+</div>
+<div class="menu" #menu>
+    <div class="menu__list">
+        <div class="menu__section">
+            <div class="section__header">
+                <h4 class="header__text">Categories</h4>
+            </div>
+            <div class="section__list">
+                <div class="section__item" *ngFor="let category of categories" (click)="clickedCategory(category)" [class.active]="checkIsActive(category)">
+                    <a class="item__link">
+                        {{category.genre}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

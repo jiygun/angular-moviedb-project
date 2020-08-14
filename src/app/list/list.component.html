@@ -1,0 +1,20 @@
+<div class="list">
+    <a class="list__item" *ngFor="let show of showList" routerLink="/{{routerLink}}/{{show.id}}" (mouseover)="mouseOver(show)">
+        <div class="item__border">
+            <div class="item__image">
+                <img src="{{show.posterPath!=null?mainImagePath+show.posterPath:imageNullPath}}" alt="">
+            </div>
+            <div class="item__content">
+                <div class="item__name">
+                    {{show.title |summary:15 }}
+                </div>
+                <div class="item__avarage">
+                    <fa-icon class="fa-icon" [icon]="faStar"></fa-icon>{{show.voteAverage}}
+                </div>
+                <div class="item__releasedate">
+                    {{show.releaseDate}}
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

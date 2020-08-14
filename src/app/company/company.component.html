@@ -1,0 +1,7 @@
+<div class="company__list">
+    <h4 style="color: white;">Company List</h4>
+    <div class="company__item" *ngFor="let company of companies">
+        <img class="cast__image" src="{{company.logoPath!=null?mainImagePath+company.logoPath:imageNullPath}}">
+        <div class="cast__name">{{company.name}}</div>
+    </div>
+</div>

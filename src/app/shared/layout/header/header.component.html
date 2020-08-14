@@ -1,0 +1,69 @@
+<div class="navbar">
+    <div class="navbar__top">
+        <div class="container">
+            <div class="navbar__logo">
+                <div class="logo">
+                    <a class="logo__link" [routerLink]="['/']">
+                        <fa-icon class="logo__icon" [icon]="faVideo"></fa-icon>MovieDb
+                    </a>
+                </div>
+            </div>
+            <div class="navbar__mobil" (click)="openMenuList($event)">
+                <div class="mobil__icon">
+                    <a class="icon__link">
+                        <fa-icon class="icon" [icon]="faBars"></fa-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar__menu" #menu>
+                <div class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a class="item__link" [routerLink]="['/']">Home</a></li>
+                        <li class="menu__item"><a class="item__link" [routerLink]="['/movie']">Movies</a></li>
+                        <li class="menu__item"><a class="item__link" [routerLink]="['/series']">Series</a></li>
+                        <li class="menu__item"><a class="item__link" [routerLink]="['/people']">People</a></li>
+                    </ul>
+                </div>
+                <div class="search__icon"  (click)="openSearchBox($event)">
+                    <fa-icon [icon]="faSearch"></fa-icon>
+                </div>
+            </div>
+            <div class="navbar__search" #search>
+                <div class="search">
+                    <a class="search__icon">
+                        <fa-icon [icon]="faSearch"></fa-icon>
+                    </a>
+                    <div class="search__form">
+                        <form class="form" #form="ngForm">
+                            <input class="input" [(ngModel)]="inputText" type="text" name="search" placeholder="Search.."
+                                #search="ngModel">
+                        </form>
+                    </div>
+                </div>
+                <div class="navbar__result">
+                    <app-search [searchInput]="inputText" [clearSearchSection]="setSearchVisibility" (isSearchClicked)="clearInput($event)"></app-search>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar__bottom">
+        <div class="container">
+            <div class="navbar__search">
+                <div class="search">
+                    <a class="search__icon">
+                        <fa-icon [icon]="faSearch"></fa-icon>
+                    </a>
+                    <div class="search__form">
+                        <form class="form" #form="ngForm">
+                            <input class="input" [(ngModel)]="inputText" type="text" name="search" placeholder="Search.."
+                                #search="ngModel">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__result">
+                <app-search [searchInput]="inputText" [clearSearchSection]="setSearchVisibility" (isSearchClicked)="clearInput($event)"></app-search>
+            </div>
+        </div>
+    </div>
+</div>

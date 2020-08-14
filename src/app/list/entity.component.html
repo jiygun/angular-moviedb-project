@@ -1,0 +1,23 @@
+<div class="content">
+    <div class="content__list">
+        <h4 style="color: white;">{{contentHeader}}</h4>
+        <a class="content__item" *ngFor="let content of mainContentList" routerLink="{{routerPath}}/{{content.id}}">
+            <img class="content__image" src="{{content.imagePath!=null?mainImagePath+content.imagePath:imageNullPath}}">
+            <div class="content__name">{{content.name}}</div>
+            <div class="content__name" *ngIf="content.optionalName!=null">{{content.optionalName}}</div>
+        </a>
+        <div class="show-more" *ngIf="isMoreOpen&&isMainFull" (click)="showMoreCast()">
+            <span>Show More</span>
+        </div>
+    </div>
+    <div class="content__list"  *ngIf="!isMoreOpen">
+        <a class="content__item" *ngFor="let content of moreContentList" routerLink="{{routerPath}}/{{content.id}}">
+            <img class="content__image" src="{{content.imagePath!=null?mainImagePath+content.imagePath:imageNullPath}}">
+            <div class="content__name">{{content.name}}</div>
+            <div class="content__name" *ngIf="content.optionalName!=null">{{content.optionalName}}</div>
+        </a>
+        <div class="show-more" *ngIf="!isMoreOpen" (click)="showMoreCast()">
+            <span>Hide</span>
+        </div>
+    </div>
+</div>

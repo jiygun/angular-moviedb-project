@@ -1,0 +1,28 @@
+$color-dark: #0B0C10;
+$color-open-dark:#1f2833;
+$color-white:#C5C6C7;
+$color-main: #66fcf1;
+$color-main-hover: #45a29e;
+
+.company__list{
+    display: flex;
+    flex-direction: column;
+    .company__item{
+        display: flex;
+        align-items: center;
+        padding:.5rem 0;
+        margin:.25rem 0;
+        border:1px solid $color-white;
+        border-radius: 1rem;
+        color: $color-dark;
+        background-color: $color-white;
+        .cast__image{
+            padding-left: 1rem;
+            max-width: 100px;
+            max-height: 200px;
+        }
+        .cast__name{
+            padding:0 .5rem;
+        }
+    }
+}

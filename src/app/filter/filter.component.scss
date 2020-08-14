@@ -1,0 +1,32 @@
+$color-dark: #0B0C10;
+$color-open-dark:#1f2833;
+$color-white:#C5C6C7;
+$color-main: #66fcf1;
+$color-main-hover: #45a29e;
+.filter__drop{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    background-color: $color-dark;
+    margin:.5rem;
+    padding:.5rem 1rem;
+    border-radius: .5rem;
+    select{
+        cursor: pointer;
+        margin-right: 1.5rem;
+        padding-right: 2rem;
+        border-radius: 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        right: 3.4rem;
+        top: 1.1rem;
+        border:solid;
+        border-width: 10px;
+        border-color: $color-main-hover transparent transparent transparent;
+    }
+}

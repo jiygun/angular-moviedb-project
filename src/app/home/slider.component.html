@@ -1,0 +1,20 @@
+<div class="slider" #slider>
+    <div class="slider__content">
+        <hr>
+        <fa-icon [icon]="faHeart"></fa-icon>
+        <span>Most Popular</span>
+    </div>
+    <div class="slider__slides" #slides>
+        <div class="section" >
+            <slider-angular [slideList]="movieSlideList" (activeSlide)="activeMovieSlide($event)" (clickedSlide)="clickedMovieSlide($event)"></slider-angular>
+        </div>
+        <div class="section" >
+            <slider-angular [slideList]="seriesSlideList" (activeSlide)="activeSeriesSlide($event)" (clickedSlide)="clickedSeriesSlide($event)"></slider-angular>
+        </div>
+    </div>
+    <div class="slider__switch active" (click)="setSlider($event)">
+        <button class="btn btn-movies"><span class="movies">Movies</span></button>
+        <button class="btn btn-series"><span class="">Series</span></button>
+        <div class="switch movies" #switch></div>
+    </div>
+</div>

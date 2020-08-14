@@ -1,0 +1,42 @@
+<div class="detail">
+    <div class="container">
+        <div class="detail__header">
+            <div class="header__left">
+                <div class="image">
+                    <img src="{{series.posterPath!=null?mainImagePath+series.posterPath:imageNullPath}}" alt="">
+                </div>
+            </div>
+            <div class="header__right">
+                <div class="name">
+                    <h4>{{series.name}}</h4>
+                </div>
+                <div class="release-date">
+                    <span>{{series.firstAirDate}}</span>
+                </div>
+                <div class="genres">
+                    <span *ngFor="let genre of series.genres;let i=index">{{genre.genre}}<span *ngIf="series.genres.length!=(i+1)">& </span></span>
+                </div>
+                <div class="average">
+                    <fa-icon class="fa-icon" [icon]="faStar"></fa-icon><span>{{series.voteAverage}}</span>
+                </div>
+                <div class="explanation">
+                    <p>{{series.overView | summary:820}}</p>
+                </div>
+                <div class="links">
+                    <a href="{{series.homepage}}">Homepage</a>
+                    <a href="https://www.themoviedb.org/tv/{{series.id}}">MovieDb</a>
+                </div>
+            </div>
+            <ng-template #loader *ngIf="isLoad"></ng-template>
+        </div>
+        <div class="detail__content">
+            <div class="cast">
+                <app-entity [contentHeader]="contentTitle" [routerPath]="routerPath" [mainContentList]="mainCastList" [moreContentList]="moreCastList"></app-entity>
+            </div>
+            <div class="company">
+                <app-company [companies]="series.productionCompanies"></app-company>
+            </div>
+            <ng-template #loader *ngIf="isLoad"></ng-template>
+        </div>
+    </div>
+</div>

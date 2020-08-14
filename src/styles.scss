@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+$color-dark: #0B0C10;
+$color-open-dark:#1f2833;
+$color-white:#C5C6C7;
+$color-main: #66fcf1;
+$color-main-hover: #45a29e;
+
+body{
+    background-color: $color-open-dark !important;
+}
+html{
+    font-size: 20px;
+}
+.container{
+    padding: 0;
+}
+ul{
+    list-style: none;
+    margin: 0 !important;
+    padding:0 !important;
+}
+a{
+    &:hover{
+        text-decoration: none !important;
+    }
+}
+p{
+    margin: 0 !important;
+}

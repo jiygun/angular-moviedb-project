@@ -1,0 +1,33 @@
+$color-dark: #0B0C10;
+$color-open-dark:#1f2833;
+$color-white:#C5C6C7;
+$color-main: #66fcf1;
+$color-main-hover: #45a29e;
+
+:host{
+    display: block;
+    width: 100%;
+    .search{
+        background-color: $color-dark;
+        .search__list{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .search__item{
+                display: flex;
+                width: 100%;
+                justify-content: flex-start;
+                align-items: center;
+                border:1px solid $color-main;
+                img{
+                    width: 125px;
+                    max-height: 150px;
+                }
+                span{
+                    color:$color-white;
+                }
+            }
+        }
+    }
+}

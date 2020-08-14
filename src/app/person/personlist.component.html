@@ -1,0 +1,23 @@
+<div class="person">
+    <div class="container">
+        <div class="list">
+            <div class="person__list">
+                <a class="person__item" *ngFor="let person of personList" [routerLink]="['/people',person.id]">
+                    <div class="border">
+                        <div class="person__image">
+                            <img src="{{person.profilePath!=null?mainImagePath+person.profilePath:imageNullPath}}" alt="">
+                        </div>
+                        <div class="person__content">
+                            <div class="person__name">
+                                {{person.name}}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="pagination">
+            <angular-paginate [totalPages]="totalPages" [maximumShowAblePage]="5"  (activePageNumber)="activePage($event)"></angular-paginate>
+        </div>
+    </div>
+</div>

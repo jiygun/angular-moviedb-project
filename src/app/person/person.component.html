@@ -1,0 +1,38 @@
+<div class="people">
+    <div class="container">
+        <div class="people__header">
+            <div class="header__left">
+                <div class="image">
+                    <img src="{{people.profilePath!=null?mainImagePath+people.profilePath:imageNullPath}}" alt="">
+                </div>
+            </div>
+            <div class="header__right">
+                <div class="name">
+                    <h4>{{people.name}}</h4>
+                </div>
+                <div class="release-date">
+                    <span>{{people.birthday}}</span>
+                </div>
+                <div class="average">
+                    <fa-icon class="fa-icon" [icon]="faHeart"></fa-icon><span>{{people.popularity}}</span>
+                </div>
+                <div class="explanation">
+                    <p>{{people.biography | summary:820}}</p>
+                </div>
+                <div class="links">
+                    <a href="{{people.homepage}}">Homepage</a>
+                    <a href="https://www.themoviedb.org/person/{{people.id}}">MovieDb</a>
+                    <a href="https://www.imdb.com/name/{{people.imdbId}}">Imdb</a>
+                </div>
+            </div>
+        </div>
+        <div class="people__content">
+            <div class="show">
+                <app-entity [contentHeader]="movieContentTitle" [routerPath]="movieRouterPath" [mainContentList]="mainMovieList" [moreContentList]="moreMovieList"></app-entity>
+            </div>
+            <div class="show">
+                <app-entity [contentHeader]="seriesContentTitle" [routerPath]="seriesRouterPath" [mainContentList]="mainSeriesList" [moreContentList]="moreSeriesList"></app-entity>
+            </div>
+        </div>
+    </div>
+</div>

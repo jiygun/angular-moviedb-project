@@ -1,6 +1,11 @@
 {
   "name": "moviedb-project",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Jiyan Güngen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiygun/moviedb-project.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -19,12 +24,19 @@
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
+    "@fortawesome/angular-fontawesome": "^0.7.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "angular-paginate": "0.0.7",
+    "bootstrap": "^4.5.2",
     "rxjs": "~6.5.5",
+    "slider-angular": "^1.0.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.0",
+    "@angular-devkit/build-ng-packagr": "~0.1000.5",
     "@angular/cli": "~10.0.0",
     "@angular/compiler-cli": "~10.0.0",
     "@types/node": "^12.11.1",
@@ -38,6 +50,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~3.3.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^10.0.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",

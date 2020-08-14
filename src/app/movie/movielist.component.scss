@@ -1,0 +1,48 @@
+$color-dark: #0B0C10;
+$color-open-dark:#1f2833;
+$color-white:#C5C6C7;
+$color-main: #66fcf1;
+$color-main-hover: #45a29e;
+.show{
+    display: flex;
+    background-color: $color-open-dark;
+    background-size:100% 100%;
+    .container{
+        display: flex;
+        padding:0;
+        .show__menu{
+            display: flex;
+        }
+        .show__list{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .pagination{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px){
+}
+@media (min-width: 768px){
+}
+@media (min-width: 992px){
+    .show{
+        .container{
+            .show__menu{
+                display: flex;
+                width: 20%;
+            }
+            .show__list{
+                display: flex;
+                width: 80%;
+            }
+        }
+    }
+}
+@media (min-width: 1200px){
+}
